@@ -13,6 +13,8 @@ namespace Tic_tac_toe
     public partial class Form1 : Form
     {
         bool turn = true;
+        int turn_count = 0;
+        int player1 = 0, player2 = 0;
 
         public Form1()
         {
@@ -32,6 +34,7 @@ namespace Tic_tac_toe
                 turn = true;
             }
             btn1.Enabled = false;
+            Check_winner();
         }
 
         private void btn2_Click(object sender, EventArgs e)
@@ -47,6 +50,7 @@ namespace Tic_tac_toe
                 turn = true;
             }
             btn2.Enabled = false;
+            Check_winner();
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -78,6 +82,7 @@ namespace Tic_tac_toe
                 turn = true;
             }
             btn4.Enabled = false;
+            Check_winner();
         }
 
         private void btn5_Click(object sender, EventArgs e)
@@ -93,6 +98,7 @@ namespace Tic_tac_toe
                 turn = true;
             }
             btn5.Enabled = false;
+            Check_winner();
         }
 
         private void btn6_Click(object sender, EventArgs e)
@@ -124,6 +130,7 @@ namespace Tic_tac_toe
                 turn = true;
             }
             btn7.Enabled = false;
+            Check_winner();
         }
 
         private void btn8_Click(object sender, EventArgs e)
@@ -139,6 +146,7 @@ namespace Tic_tac_toe
                 turn = true;
             }
             btn8.Enabled = false;
+            Check_winner();
         }
 
         private void btn9_Click(object sender, EventArgs e)
@@ -154,7 +162,7 @@ namespace Tic_tac_toe
                 turn = true;
             }
             btn9.Enabled = false;
-            Check_winner();
+            Check_winner();     
         }
         
         private void Check_winner()
@@ -162,6 +170,26 @@ namespace Tic_tac_toe
             bool winner = false;
 
             if((btn1.Text == btn2.Text) && (btn2.Text == btn3.Text) && btn1.Enabled == false)
+            {
+                winner = true;
+            }
+            if ((btn1.Text == btn4.Text) && (btn4.Text == btn7.Text) && btn1.Enabled == false)
+            {
+                winner = true;
+            }
+            if ((btn1.Text == btn5.Text) && (btn5.Text == btn9.Text) && btn1.Enabled == false)
+            {
+                winner = true;
+            }
+            if ((btn2.Text == btn5.Text) && (btn5.Text == btn8.Text) && btn2.Enabled == false)
+            {
+                winner = true;
+            }
+            if ((btn3.Text == btn6.Text) && (btn6.Text == btn9.Text) && btn3.Enabled == false)
+            {
+                winner = true;
+            }
+            if ((btn3.Text == btn5.Text) && (btn5.Text == btn7.Text) && btn3.Enabled == false)
             {
                 winner = true;
             }
@@ -174,17 +202,60 @@ namespace Tic_tac_toe
                 winner = true;
             }
 
-            if (winner)
+            turn_count += 1;
+
+            if ((winner) && turn_count < 10)
             {
                 if (turn)
                 {
                     MessageBox.Show("Player 2 WINS");
+                    Reset_buttons();
+                    player2 += 1;
+                    scorebox2.Text = player2.ToString();
                 }
                 else
                 {
                     MessageBox.Show("Player 1 WINS");
+                    Reset_buttons();
+                    player1 += 1;
+                    scorebox1.Text = player1.ToString();
                 }
             }
+            else if (turn_count == 9)
+            {
+                MessageBox.Show("DRAW");
+                Reset_buttons();
+            }
+        }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void exitGameToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Reset_buttons()
+        {
+            btn1.Text = ""; btn1.Enabled = true;
+            btn2.Text = ""; btn2.Enabled = true;
+            btn3.Text = ""; btn3.Enabled = true;
+            btn4.Text = ""; btn4.Enabled = true;
+            btn5.Text = ""; btn5.Enabled = true;
+            btn6.Text = ""; btn6.Enabled = true;
+            btn7.Text = ""; btn7.Enabled = true;
+            btn8.Text = ""; btn8.Enabled = true;
+            btn9.Text = ""; btn9.Enabled = true;
+            turn = !turn;
+            turn_count = 0;
         }
     }
 }

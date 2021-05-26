@@ -8,3 +8,4 @@ C:\Users\ADMIN\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.csproj.GenerateRes
 C:\Users\ADMIN\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.exe
 C:\Users\ADMIN\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.pdb
+C:\Users\ADMIN\source\repos\Tic-tac-toe\obj\Debug\Tic_tac_toe.Loading.resources

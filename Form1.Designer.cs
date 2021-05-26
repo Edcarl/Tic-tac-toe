@@ -29,6 +29,7 @@ namespace Tic_tac_toe
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
@@ -38,11 +39,21 @@ namespace Tic_tac_toe
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
+            this.scorebox1 = new System.Windows.Forms.TextBox();
+            this.scorebox2 = new System.Windows.Forms.TextBox();
+            this.Player1 = new System.Windows.Forms.Label();
+            this.Player2 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitGameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(9, 39);
+            this.btn1.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.Location = new System.Drawing.Point(9, 66);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(75, 75);
             this.btn1.TabIndex = 0;
@@ -51,7 +62,8 @@ namespace Tic_tac_toe
             // 
             // btn2
             // 
-            this.btn2.Location = new System.Drawing.Point(85, 39);
+            this.btn2.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2.Location = new System.Drawing.Point(85, 66);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(75, 75);
             this.btn2.TabIndex = 1;
@@ -60,7 +72,8 @@ namespace Tic_tac_toe
             // 
             // btn3
             // 
-            this.btn3.Location = new System.Drawing.Point(161, 39);
+            this.btn3.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3.Location = new System.Drawing.Point(161, 66);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(75, 75);
             this.btn3.TabIndex = 2;
@@ -69,7 +82,8 @@ namespace Tic_tac_toe
             // 
             // btn6
             // 
-            this.btn6.Location = new System.Drawing.Point(161, 115);
+            this.btn6.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6.Location = new System.Drawing.Point(161, 142);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(75, 75);
             this.btn6.TabIndex = 5;
@@ -78,7 +92,8 @@ namespace Tic_tac_toe
             // 
             // btn5
             // 
-            this.btn5.Location = new System.Drawing.Point(85, 115);
+            this.btn5.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5.Location = new System.Drawing.Point(85, 142);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(75, 75);
             this.btn5.TabIndex = 4;
@@ -87,7 +102,8 @@ namespace Tic_tac_toe
             // 
             // btn4
             // 
-            this.btn4.Location = new System.Drawing.Point(9, 115);
+            this.btn4.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4.Location = new System.Drawing.Point(9, 142);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(75, 75);
             this.btn4.TabIndex = 3;
@@ -96,7 +112,8 @@ namespace Tic_tac_toe
             // 
             // btn9
             // 
-            this.btn9.Location = new System.Drawing.Point(161, 191);
+            this.btn9.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn9.Location = new System.Drawing.Point(161, 218);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(75, 75);
             this.btn9.TabIndex = 8;
@@ -105,7 +122,8 @@ namespace Tic_tac_toe
             // 
             // btn8
             // 
-            this.btn8.Location = new System.Drawing.Point(85, 191);
+            this.btn8.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn8.Location = new System.Drawing.Point(85, 218);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(75, 75);
             this.btn8.TabIndex = 7;
@@ -114,18 +132,96 @@ namespace Tic_tac_toe
             // 
             // btn7
             // 
-            this.btn7.Location = new System.Drawing.Point(9, 191);
+            this.btn7.Font = new System.Drawing.Font("Jokerman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn7.Location = new System.Drawing.Point(9, 218);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(75, 75);
             this.btn7.TabIndex = 6;
             this.btn7.UseVisualStyleBackColor = true;
             this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
+            // scorebox1
+            // 
+            this.scorebox1.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scorebox1.Location = new System.Drawing.Point(207, 24);
+            this.scorebox1.Name = "scorebox1";
+            this.scorebox1.Size = new System.Drawing.Size(29, 21);
+            this.scorebox1.TabIndex = 9;
+            // 
+            // scorebox2
+            // 
+            this.scorebox2.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scorebox2.Location = new System.Drawing.Point(207, 44);
+            this.scorebox2.Name = "scorebox2";
+            this.scorebox2.Size = new System.Drawing.Size(29, 21);
+            this.scorebox2.TabIndex = 10;
+            // 
+            // Player1
+            // 
+            this.Player1.AutoSize = true;
+            this.Player1.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Player1.ForeColor = System.Drawing.Color.Blue;
+            this.Player1.Location = new System.Drawing.Point(149, 24);
+            this.Player1.Name = "Player1";
+            this.Player1.Size = new System.Drawing.Size(49, 17);
+            this.Player1.TabIndex = 11;
+            this.Player1.Text = "Player1";
+            // 
+            // Player2
+            // 
+            this.Player2.AutoSize = true;
+            this.Player2.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Player2.ForeColor = System.Drawing.Color.Blue;
+            this.Player2.Location = new System.Drawing.Point(149, 44);
+            this.Player2.Name = "Player2";
+            this.Player2.Size = new System.Drawing.Size(51, 17);
+            this.Player2.TabIndex = 12;
+            this.Player2.Text = "Player2";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newGameToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(246, 24);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // newGameToolStripMenuItem
+            // 
+            this.newGameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitGameToolStripMenuItem,
+            this.exitGameToolStripMenuItem1});
+            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.newGameToolStripMenuItem.Text = "Menu";
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
+            // 
+            // exitGameToolStripMenuItem
+            // 
+            this.exitGameToolStripMenuItem.Name = "exitGameToolStripMenuItem";
+            this.exitGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitGameToolStripMenuItem.Text = "New Game";
+            this.exitGameToolStripMenuItem.Click += new System.EventHandler(this.exitGameToolStripMenuItem_Click);
+            // 
+            // exitGameToolStripMenuItem1
+            // 
+            this.exitGameToolStripMenuItem1.Name = "exitGameToolStripMenuItem1";
+            this.exitGameToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitGameToolStripMenuItem1.Text = "Exit Game";
+            this.exitGameToolStripMenuItem1.Click += new System.EventHandler(this.exitGameToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 274);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(246, 297);
+            this.Controls.Add(this.Player2);
+            this.Controls.Add(this.Player1);
+            this.Controls.Add(this.scorebox2);
+            this.Controls.Add(this.scorebox1);
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
@@ -135,11 +231,17 @@ namespace Tic_tac_toe
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
+            this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic tac toe";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -154,6 +256,14 @@ namespace Tic_tac_toe
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn7;
+        private System.Windows.Forms.TextBox scorebox1;
+        private System.Windows.Forms.TextBox scorebox2;
+        private System.Windows.Forms.Label Player1;
+        private System.Windows.Forms.Label Player2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitGameToolStripMenuItem1;
     }
 }
 
