@@ -38,6 +38,9 @@ namespace Tic_tac_toe
             this.Loadingbar = new System.Windows.Forms.ProgressBar();
             this.Loadingtimer = new System.Windows.Forms.Timer(this.components);
             this.Startbtn = new System.Windows.Forms.Button();
+            this.LoadingPic = new System.Windows.Forms.PictureBox();
+            this.WelcomeMessage = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadingPic)).BeginInit();
             this.SuspendLayout();
             // 
             // Player1box
@@ -59,22 +62,22 @@ namespace Tic_tac_toe
             // Player1lbl
             // 
             this.Player1lbl.AutoSize = true;
-            this.Player1lbl.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Player1lbl.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Player1lbl.ForeColor = System.Drawing.Color.Blue;
-            this.Player1lbl.Location = new System.Drawing.Point(47, 45);
+            this.Player1lbl.Location = new System.Drawing.Point(50, 45);
             this.Player1lbl.Name = "Player1lbl";
-            this.Player1lbl.Size = new System.Drawing.Size(139, 20);
+            this.Player1lbl.Size = new System.Drawing.Size(135, 19);
             this.Player1lbl.TabIndex = 2;
             this.Player1lbl.Text = "Enter Player 1 Name:";
             // 
             // Player2lbl
             // 
             this.Player2lbl.AutoSize = true;
-            this.Player2lbl.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Player2lbl.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Player2lbl.ForeColor = System.Drawing.Color.Blue;
-            this.Player2lbl.Location = new System.Drawing.Point(47, 105);
+            this.Player2lbl.Location = new System.Drawing.Point(50, 105);
             this.Player2lbl.Name = "Player2lbl";
-            this.Player2lbl.Size = new System.Drawing.Size(141, 20);
+            this.Player2lbl.Size = new System.Drawing.Size(137, 19);
             this.Player2lbl.TabIndex = 3;
             this.Player2lbl.Text = "Enter Player 2 Name:";
             // 
@@ -103,23 +106,49 @@ namespace Tic_tac_toe
             this.Startbtn.UseVisualStyleBackColor = true;
             this.Startbtn.Click += new System.EventHandler(this.Startbtn_Click);
             // 
+            // LoadingPic
+            // 
+            this.LoadingPic.BackgroundImage = global::Tic_tac_toe.Properties.Resources._try;
+            this.LoadingPic.Location = new System.Drawing.Point(12, 66);
+            this.LoadingPic.Name = "LoadingPic";
+            this.LoadingPic.Size = new System.Drawing.Size(225, 180);
+            this.LoadingPic.TabIndex = 6;
+            this.LoadingPic.TabStop = false;
+            this.LoadingPic.Visible = false;
+            // 
+            // WelcomeMessage
+            // 
+            this.WelcomeMessage.AutoSize = true;
+            this.WelcomeMessage.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeMessage.ForeColor = System.Drawing.Color.Blue;
+            this.WelcomeMessage.Location = new System.Drawing.Point(77, 9);
+            this.WelcomeMessage.Name = "WelcomeMessage";
+            this.WelcomeMessage.Size = new System.Drawing.Size(70, 20);
+            this.WelcomeMessage.TabIndex = 7;
+            this.WelcomeMessage.Text = "Welcome";
+            this.WelcomeMessage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.WelcomeMessage.Visible = false;
+            // 
             // Loading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(246, 297);
+            this.Controls.Add(this.WelcomeMessage);
             this.Controls.Add(this.Startbtn);
             this.Controls.Add(this.Loadingbar);
             this.Controls.Add(this.Player2lbl);
             this.Controls.Add(this.Player1lbl);
             this.Controls.Add(this.Player2box);
             this.Controls.Add(this.Player1box);
+            this.Controls.Add(this.LoadingPic);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Loading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic Tac Toe";
+            ((System.ComponentModel.ISupportInitialize)(this.LoadingPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +163,7 @@ namespace Tic_tac_toe
         private System.Windows.Forms.ProgressBar Loadingbar;
         private System.Windows.Forms.Timer Loadingtimer;
         private System.Windows.Forms.Button Startbtn;
+        private System.Windows.Forms.PictureBox LoadingPic;
+        private System.Windows.Forms.Label WelcomeMessage;
     }
 }

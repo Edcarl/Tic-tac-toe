@@ -201,14 +201,14 @@ namespace Tic_tac_toe
             // exitGameToolStripMenuItem
             // 
             this.exitGameToolStripMenuItem.Name = "exitGameToolStripMenuItem";
-            this.exitGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitGameToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.exitGameToolStripMenuItem.Text = "New Game";
             this.exitGameToolStripMenuItem.Click += new System.EventHandler(this.exitGameToolStripMenuItem_Click);
             // 
             // exitGameToolStripMenuItem1
             // 
             this.exitGameToolStripMenuItem1.Name = "exitGameToolStripMenuItem1";
-            this.exitGameToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitGameToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
             this.exitGameToolStripMenuItem1.Text = "Exit Game";
             this.exitGameToolStripMenuItem1.Click += new System.EventHandler(this.exitGameToolStripMenuItem1_Click);
             // 
@@ -238,6 +238,7 @@ namespace Tic_tac_toe
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic tac toe";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

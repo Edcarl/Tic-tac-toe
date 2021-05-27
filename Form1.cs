@@ -15,11 +15,22 @@ namespace Tic_tac_toe
         bool turn = true;
         int turn_count = 0;
         int player1 = 0, player2 = 0;
+        string PlayerName1, PlayerName2;
 
         public Form1()
         {
+            InitializeComponent();    
+        }
+        public Form1(string Player_1, string Player_2)
+        {
+            PlayerName1 = Player_1;
+            PlayerName2 = Player_2;
+            //Player1.Text = Player_1;
+           // Player2.Text = Player_2;
+            
             InitializeComponent();
         }
+
 
         private void btn1_Click(object sender, EventArgs e)
         {
@@ -208,14 +219,14 @@ namespace Tic_tac_toe
             {
                 if (turn)
                 {
-                    MessageBox.Show("Player 2 WINS");
+                    MessageBox.Show(Player2.Text + " WINS");
                     Reset_buttons();
                     player2 += 1;
                     scorebox2.Text = player2.ToString();
                 }
                 else
                 {
-                    MessageBox.Show("Player 1 WINS");
+                    MessageBox.Show(Player1.Text + " WINS");
                     Reset_buttons();
                     player1 += 1;
                     scorebox1.Text = player1.ToString();
@@ -236,6 +247,12 @@ namespace Tic_tac_toe
         private void exitGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Player1.Text = PlayerName1;
+            Player2.Text = PlayerName2;
         }
 
         private void exitGameToolStripMenuItem1_Click(object sender, EventArgs e)
