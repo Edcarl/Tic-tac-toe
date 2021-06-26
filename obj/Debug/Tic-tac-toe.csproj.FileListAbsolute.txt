@@ -9,3 +9,14 @@ C:\Users\ADMIN\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.csproj.CoreCompile
 C:\Users\ADMIN\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.exe
 C:\Users\ADMIN\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.pdb
 C:\Users\ADMIN\source\repos\Tic-tac-toe\obj\Debug\Tic_tac_toe.Loading.resources
+C:\Users\Edcarl\source\repos\Tic-tac-toe\bin\Debug\Tic-tac-toe.exe.config
+C:\Users\Edcarl\source\repos\Tic-tac-toe\bin\Debug\Tic-tac-toe.exe
+C:\Users\Edcarl\source\repos\Tic-tac-toe\bin\Debug\Tic-tac-toe.pdb
+C:\Users\Edcarl\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.csprojAssemblyReference.cache
+C:\Users\Edcarl\source\repos\Tic-tac-toe\obj\Debug\Tic_tac_toe.Form1.resources
+C:\Users\Edcarl\source\repos\Tic-tac-toe\obj\Debug\Tic_tac_toe.Loading.resources
+C:\Users\Edcarl\source\repos\Tic-tac-toe\obj\Debug\Tic_tac_toe.Properties.Resources.resources
+C:\Users\Edcarl\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.csproj.GenerateResource.cache
+C:\Users\Edcarl\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.csproj.CoreCompileInputs.cache
+C:\Users\Edcarl\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.exe
+C:\Users\Edcarl\source\repos\Tic-tac-toe\obj\Debug\Tic-tac-toe.pdb

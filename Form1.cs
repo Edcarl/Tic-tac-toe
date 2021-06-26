@@ -24,9 +24,7 @@ namespace Tic_tac_toe
         public Form1(string Player_1, string Player_2)
         {
             PlayerName1 = Player_1;
-            PlayerName2 = Player_2;
-            //Player1.Text = Player_1;
-           // Player2.Text = Player_2;
+            PlayerName2 = Player_2;;
             
             InitializeComponent();
         }
