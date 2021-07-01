@@ -12,10 +12,7 @@ namespace Tic_tac_toe
 {
     public partial class Form1 : Form
     {
-        bool turn = true;
-        int turn_count = 0;
-        int player1 = 0, player2 = 0;
-        string PlayerName1, PlayerName2;
+        myFunc func = new myFunc();
 
         public Form1()
         {
@@ -23,8 +20,8 @@ namespace Tic_tac_toe
         }
         public Form1(string Player_1, string Player_2)
         {
-            PlayerName1 = Player_1;
-            PlayerName2 = Player_2;;
+            func.PlayerName1 = Player_1;
+            func.PlayerName2 = Player_2;;
             
             InitializeComponent();
         }
@@ -32,15 +29,15 @@ namespace Tic_tac_toe
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (turn)
+            if (func.turn)
             {
                 btn1.Text = "X";
-                turn = false;
+                func.turn = false;
             }
             else
             {
                 btn1.Text = "O";
-                turn = true;
+                func.turn = true;
             }
             btn1.Enabled = false;
             Check_winner();
@@ -48,15 +45,15 @@ namespace Tic_tac_toe
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (turn)
+            if (func.turn)
             {
                 btn2.Text = "X";
-                turn = false;
+                func.turn = false;
             }
             else
             {
                 btn2.Text = "O";
-                turn = true;
+                func.turn = true;
             }
             btn2.Enabled = false;
             Check_winner();
@@ -64,15 +61,15 @@ namespace Tic_tac_toe
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (turn)
+            if (func.turn)
             {
                 btn3.Text = "X";
-                turn = false;
+                func.turn = false;
             }
             else
             {
                 btn3.Text = "O";
-                turn = true;
+                func.turn = true;
             }
             btn3.Enabled = false;
             Check_winner();
@@ -80,15 +77,15 @@ namespace Tic_tac_toe
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (turn)
+            if (func.turn)
             {
                 btn4.Text = "X";
-                turn = false;
+                func.turn = false;
             }
             else
             {
                 btn4.Text = "O";
-                turn = true;
+                func.turn = true;
             }
             btn4.Enabled = false;
             Check_winner();
@@ -96,15 +93,15 @@ namespace Tic_tac_toe
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (turn)
+            if (func.turn)
             {
                 btn5.Text = "X";
-                turn = false;
+                func.turn = false;
             }
             else
             {
                 btn5.Text = "O";
-                turn = true;
+               func.turn = true;
             }
             btn5.Enabled = false;
             Check_winner();
@@ -112,15 +109,15 @@ namespace Tic_tac_toe
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            if (turn)
+            if (func.turn)
             {
                 btn6.Text = "X";
-                turn = false;
+                func.turn = false;
             }
             else
             {
                 btn6.Text = "O";
-                turn = true;
+                func.turn = true;
             }
             btn6.Enabled = false;
             Check_winner();
@@ -128,15 +125,15 @@ namespace Tic_tac_toe
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (turn)
+            if (func.turn)
             {
                 btn7.Text = "X";
-                turn = false;
+                func.turn = false;
             }
             else
             {
                 btn7.Text = "O";
-                turn = true;
+                func.turn = true;
             }
             btn7.Enabled = false;
             Check_winner();
@@ -144,15 +141,15 @@ namespace Tic_tac_toe
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            if (turn)
+            if (func.turn)
             {
                 btn8.Text = "X";
-                turn = false;
+                func.turn = false;
             }
             else
             {
                 btn8.Text = "O";
-                turn = true;
+                func.turn = true;
             }
             btn8.Enabled = false;
             Check_winner();
@@ -160,15 +157,15 @@ namespace Tic_tac_toe
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            if (turn)
+            if (func.turn)
             {
                 btn9.Text = "X";
-                turn = false;
+                func.turn = false;
             }
             else
             {
                 btn9.Text = "O";
-                turn = true;
+                func.turn = true;
             }
             btn9.Enabled = false;
             Check_winner();     
@@ -211,35 +208,30 @@ namespace Tic_tac_toe
                 winner = true;
             }
 
-            turn_count += 1;
+            func.turn_count += 1;
 
-            if ((winner) && turn_count < 10)
+            if ((winner) && func.turn_count < 10)
             {
-                if (turn)
+                if (func.turn)
                 {
                     MessageBox.Show(Player2.Text + " WINS");
                     Reset_buttons();
-                    player2 += 1;
-                    scorebox2.Text = player2.ToString();
+                    func.player2 += 1;
+                    scorebox2.Text = func.player2.ToString();
                 }
                 else
                 {
                     MessageBox.Show(Player1.Text + " WINS");
                     Reset_buttons();
-                    player1 += 1;
-                    scorebox1.Text = player1.ToString();
+                    func.player1 += 1;
+                    scorebox1.Text = func.player1.ToString();
                 }
             }
-            else if (turn_count == 9)
+            else if (func.turn_count == 9)
             {
                 MessageBox.Show("DRAW");
                 Reset_buttons();
             }
-        }
-
-        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void exitGameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -249,8 +241,8 @@ namespace Tic_tac_toe
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Player1.Text = PlayerName1;
-            Player2.Text = PlayerName2;
+            Player1.Text = func.PlayerName1;
+            Player2.Text = func.PlayerName2;
         }
 
         private void exitGameToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -269,8 +261,9 @@ namespace Tic_tac_toe
             btn7.Text = ""; btn7.Enabled = true;
             btn8.Text = ""; btn8.Enabled = true;
             btn9.Text = ""; btn9.Enabled = true;
-            turn = !turn;
-            turn_count = 0;
+            func.turn = !func.turn;
+            func.turn_count = 0;
         }
+
     }
 }
